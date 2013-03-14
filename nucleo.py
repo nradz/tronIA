@@ -231,7 +231,25 @@ def torneo(jugador1,oponentes,num):
 	"""oponentes es una lista de jugadores. Jugador 1 se enfrentará con cada uno tantos combates como diga num.
 	El resultado será una lista donde cada posicion corresponde a un oponente. Dentro de dicha posicion, habra
 	otra lista con los resultados de cada combate."""
-	return 0
+
+
+	res=[]
+
+	for i in range(len(oponentes)):
+		res.append([])
+		
+		for e in range(num):
+			aux=combatePasoAPaso(jugador1,oponentes[i])
+			res[i].append(aux)
+
+
+
+	return res
+
+
+
+
+	
 
 
 

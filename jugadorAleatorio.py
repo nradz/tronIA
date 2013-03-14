@@ -6,11 +6,12 @@ import random
 
 class JugadorAleatorio(motos.Moto):
 
-	def __init__(self):
+	def __init__(self,jugador):
 
-		motos.Moto.__init__(self)
+		motos.Moto.__init__(self,jugador)
 		self.ops=["right","left","up","down"]
 		self.direct=random.choice(self.ops)
+
 
 
 	def actualizar(self,matriz):

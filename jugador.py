@@ -10,8 +10,7 @@ class Jugador(motos.Moto):
 
 	def __init__(self,jugador):
 		
-		motos.Moto.__init__(self)
-		self.jugador=jugador
+		motos.Moto.__init__(self,jugador)
 		self.direct=""
 		
 		if jugador==1:
