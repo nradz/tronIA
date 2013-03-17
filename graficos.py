@@ -22,6 +22,7 @@ HEIGHT = 700
 
 
 def load_image(filename):
+	"""Carga la imagen de la ruta que se pasa como argumento"""
 
     try:
     	image = pygame.image.load(filename)
@@ -35,6 +36,7 @@ def load_image(filename):
 
 
 def cargarImagenes():
+	"""Carga una serie de imagenes necesarias para representar el 'juego'"""
 	
 	azul=load_image("images/azul.png")
 	cabazul=load_image("images/cabazul.png")
@@ -53,6 +55,7 @@ def cargarImagenes():
 
 
 def texto(texto):
+	"""Presenta texto en la pantalla"""
 	color=(0, 0, 0)
 	fuente = pygame.font.Font("images/DroidSans.ttf", 25)
 	salida = pygame.font.Font.render(fuente, texto, 1, color)	
@@ -60,6 +63,8 @@ def texto(texto):
 
 
 def dibujaMatriz(matriz,screen,images):
+	"""Esta funcion se encarga de dibujar en pantalla la matriz pasada como argumento.
+	En 'images' se deberá pasar una tupla de imagenes para tal fin."""
 	 
 	 for y in range(102):
 	 	for x in range(102):
@@ -154,6 +159,9 @@ def visualizarMatriz(matriz):
 
 
 def main(uno,dos):
+	"""Como su propio nombre indica, la funcion principal. inicia un juego entre los jugadores
+	pasados como argumento.
+	NOTA: Para reiniciar el juego, hay que pulsar 'Backspace'"""
 	
 	pygame.init()
 	screen = pygame.display.set_mode((WIDTH, HEIGHT))

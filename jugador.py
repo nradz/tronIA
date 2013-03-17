@@ -5,7 +5,10 @@ from pygame.locals import *
 
 
 class Jugador(motos.Moto):
-	"""Clase para crear jugadores "reales"""
+	"""Clase para crear jugadores 'reales'.
+	Solo se puede pasar una instancia de este
+	objeto a graficos.main(), ya que en cualquier otro caso
+	dara error ya que no esta iniciado 'pygame'"""
 	
 
 	def __init__(self,jugador):

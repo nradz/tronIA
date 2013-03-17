@@ -4,6 +4,9 @@
 
 
 def creaMatriz(dim):
+	"""Crea una matriz de orden dimxdim. Asigna a los 'bordes' el valor 31 y al resto 0"""
+
+
 	#El primer valor de la matriz sera "y". El segundo "x".
 	matriz = [[0] * dim for i in range(dim)]
 
@@ -21,6 +24,8 @@ def creaMatriz(dim):
 
 
 def buscarValor(matriz,valor):
+	"""Busca en la matriz pasada como argumento el valor dado. Solo devuelve la posicion del
+	primer valor coincidente. En el caso de no encontrar ninguno, devuelve (-1,-1) """
 
 	res=(-1,-1)
 
@@ -62,6 +67,10 @@ def existeValor(matriz,valor):
 
 def actualizaMatriz(matriz,jugador,direccion):
 	
+	"""Dado una matriz, actualiza la posicion del jugador indicado en dicha matriz teniendo en cuenta
+	la direccion pasada.
+	NOTA: Si en direccion no se pasa un valor valido, se toma por defecto la 'derecha0' """
+
 	matrizAux=matriz
 
 	#Es el valor que tendra la "cabeza" del jugador
@@ -254,6 +263,7 @@ def torneo(jugador1,oponentes,num):
 
 
 def mostrarMatriz(matriz):
+	"""Muestra la matriz de forma simplificada, para 'testeos' de la aplicacion"""
 
 	print("------------")
 	for i in matriz:
