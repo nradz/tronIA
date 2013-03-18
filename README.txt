@@ -22,6 +22,14 @@ El código ha sido programado en python 3.x usando la librería Pygame, que debe
 poder ejecutar la aplicación.
 AVISO: Pygame para python 3.x es diferente que el de versiones anteriores, por lo que hay
 que tener cuidado cual se va a instalar y escoger el adecuado.
+NOTA: Según me han comentado, también funciona en python 2.7, pero dudo que un futuro lo siga haciendo
+ya que voy a incluir varios hilos de ejecución, algo que creo que en diferente en ambas versiones.
+
+
+->"branch"
+
+El branch "master" ofrece código estable y funcional(o, al menos, hasta lo que lo he testeado). El resto
+de ramas de desarrollos que se creen no aseguran un buen funcionamiento (o puede que ninguno).
 
 
 ->Los diferentes archivos
