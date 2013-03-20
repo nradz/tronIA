@@ -24,15 +24,14 @@ HEIGHT = 700
 def load_image(filename):
 	"""Carga la imagen de la ruta que se pasa como argumento"""
 
-    try:
-    	image = pygame.image.load(filename)
-    
-    except pygame.error.message:
-        raise SystemExit.message
+	try:
+		image = pygame.image.load(filename)
 
-    image = image.convert()
-    
-    return image
+	except pygame.error.message:
+		raise SystemExit.message
+
+	image = image.convert()
+	return image
 
 
 def cargarImagenes():
@@ -65,9 +64,9 @@ def texto(texto):
 def dibujaMatriz(matriz,screen,images):
 	"""Esta funcion se encarga de dibujar en pantalla la matriz pasada como argumento.
 	En 'images' se deberá pasar una tupla de imagenes para tal fin."""
-	 
-	 for y in range(102):
-	 	for x in range(102):
+ 
+	for y in range(102):
+		for x in range(102):
 	 		ordenadas=44+6*y
 	 		abscisas=44+6*x
 	 		if matriz[y][x]==3:
